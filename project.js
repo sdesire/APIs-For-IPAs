@@ -10,5 +10,4 @@ console.log("Button Clicked");
     .catch((err) => {
       console.log(err);
     });
-});
 }
