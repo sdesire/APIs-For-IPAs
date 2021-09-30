@@ -1,7 +1,6 @@
-const myButton = document.querySelector("#btn");
-myButton.addEventListener("click", function (event) {
-  console.log("Button Clicked");
-  fetch("https://api.openbrewerydb.org/breweries")
+function getBreweries () {
+console.log("Button Clicked");
+  fetch(`https://api.openbrewerydb.org/breweries?by_state=${cityChoice}&sort=${breweryType},name:${ascDesc}`)
     .then((response) => {
       return response.json();
     })
@@ -12,3 +11,4 @@ myButton.addEventListener("click", function (event) {
       console.log(err);
     });
 });
+}
