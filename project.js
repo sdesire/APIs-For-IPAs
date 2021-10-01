@@ -1,6 +1,8 @@
 function getBreweries () {
 console.log("Button Clicked");
-  fetch(`https://api.openbrewerydb.org/breweries?by_state=${cityChoice}&sort=${breweryType},name:${ascDesc}`)
+  const cityChoice = document.getElementById('cityChoice').value;
+  const breweryType = document.getElementById('breweryType').value;
+  fetch(`https://api.openbrewerydb.org/breweries?by_state=${cityChoice}&sort=${breweryType}`)
     .then((response) => {
       return response.json();
     })
