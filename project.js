@@ -36,3 +36,4 @@ const cityChoice = document.getElementById('cityChoice').value;
       console.log(err);
     });
 }
+
