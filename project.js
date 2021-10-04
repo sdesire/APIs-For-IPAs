@@ -49,7 +49,7 @@ const cityChoice = document.getElementById('cityChoice').value;
       const filteredResponse = getFilteredBreweries(breweries, breweryTypes);
 
       const breweryListEl = document.querySelector('#breweryList');
-      
+      breweryListEl.innerHTML = '';
       console.log(filteredResponse);
       filteredResponse.forEach(function(element) {
       var bName = document.createElement('p');
@@ -59,6 +59,8 @@ const cityChoice = document.getElementById('cityChoice').value;
       var bState = document.createElement('p');
       var bPhone = document.createElement('p');
       var bWebsite = document.createElement('p');
+
+      bName.style.color = "Red"
       bWebsite.style.margin = "0px auto 10px auto"
   
       bName.innerHTML = element.name;
