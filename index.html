@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div>City: <input type="text" id="cityChoice" value="tampa" /> <span>State: <input type="text" id="stateChoice" value="florida" /></span></div>
+    <div id="userChoice">City: <input type="text" id="cityChoice" placeholder="City" /> <span>State: <input type="text" id="stateChoice" placeholder="State" /></span></div>
     <!--Brewery Options-->
     <div id="breweryType">
         <input type="checkbox" id="micro" value="micro">
@@ -43,6 +43,7 @@
         <label for="proprietor">Proprietor Breweries</label><br>
 
     </div>
+    <!-- possibly make enter also trigger the function?? -->
     <button onclick="getBreweries()">Get Brewery List</button>
 
     <div id="breweryList"></div>

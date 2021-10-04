@@ -62,3 +62,14 @@
     margin:40px 0;
     font-size:20px;
   }
+
+  #breweryType {
+    display: flex;
+  }
+  
+  #breweryType input {
+    margin: 5px 0px;
+  }
+  #breweryType label {
+    margin: 5px 5px 5px 2px;
+  }

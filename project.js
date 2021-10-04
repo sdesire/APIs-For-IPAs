@@ -34,8 +34,12 @@ function getFilteredBreweries(breweries, breweryTypes) {
   return filteredResponse;
 }
 
+document.querySelector('#userChoice').addEventListener('keypress', function getBreweries(e) {
+  if (e.key === 'Enter') {
 
-function getBreweries() {
+
+
+//function getBreweries() {
   console.log("Button Clicked");
 
   const cityChoice = document.getElementById('cityChoice').value;
@@ -92,4 +96,6 @@ function getBreweries() {
     .catch((err) => {
       console.log(err);
     });
+  }
 }
+)
