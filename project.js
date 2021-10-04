@@ -14,9 +14,10 @@ function getBreweriesTypes() {
       breweryTypes.push(inputs[i].value)
     }
   }
-  console.log(breweryTypes)
-  return breweryTypes;
-  //add option that if none are selected all are displayed**
+  console.log(breweryTypes);
+
+  //if none selected show all brewery types
+  return (breweryTypes.length == 0 )? typesB : breweryTypes;
 }
 
 function getFilteredBreweries(breweries, breweryTypes) {
@@ -39,6 +40,16 @@ function getFilteredBreweries(breweries, breweryTypes) {
 
 //document.querySelector('#userChoice').addEventListener('keypress', function getBreweries(e) {
   //if (e.key === 'Enter') {
+
+document.querySelector('#userChoice').addEventListener('keyup', function(e){ 
+    const getBreweriesBtn = document.querySelector('#btn');
+    //enter key pressed up
+    if(e.keyCode === 13){
+      e.preventDefault();
+      getBreweriesBtn.click();
+    }
+  });
+
 
 function getBreweries() {
   console.log("Button Clicked");
