@@ -1,5 +1,5 @@
-
-  var typesB = ['micro', 'nano', 'regional', 'brewpub', 'large', 'planning', 'bar', 'contract', 'proprietor']
+var typesB = ['micro', 'nano', 'regional', 'brewpub', 'large', 'planning', 'bar', 'contract', 'proprietor']
+  
 
 function getBreweriesTypes() {
   var inputDiv = document.getElementById('breweryType');
@@ -10,15 +10,18 @@ function getBreweriesTypes() {
 
     if (inputs[i].checked) {
       breweryTypes.push(inputs[i].value);
+    } else {breweryTypes.push(inputs[i].id)
+
     }
   }
+  console.log(breweryTypes)
   return breweryTypes;
   //add option that if none are selected all are displayed**
 }
 
 function getFilteredBreweries(breweries, breweryTypes) {
   var filteredResponse = [];
-
+  
   // for each brewery
   for (let i = 0; i < breweries.length; i++) {
 
