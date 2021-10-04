@@ -65,7 +65,7 @@ function getBreweries() {
         var bCity = document.createElement('h3');
         var bState = document.createElement('h3');
         var bWebsite = document.createElement('a');
-        var bPhone = document.createElement('h3');
+        var bPhone = document.createElement('a');
 
         //Style
         bName.style.color = "Red"
@@ -73,6 +73,8 @@ function getBreweries() {
         bName.style.padding = "10px 0px 0px 0px"
         bType.style.margin = "0px auto 10px auto"
         bWebsite.setAttribute("href", element.website_url)
+        bPhone.setAttribute("href", `tel:${element.phone}`)
+        bPhone.style.display = "block"
 
         //Inserts data from the JSON
         bName.innerHTML = element.name;
