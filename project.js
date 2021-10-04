@@ -10,8 +10,8 @@ function getBreweriesTypes() {
 
     if (inputs[i].checked) {
       breweryTypes.push(inputs[i].value);
-    } else {breweryTypes.push(inputs[i].id)
-
+    } else if (inputs[i].checked = false) {
+      breweryTypes.push(inputs[i].value)
     }
   }
   console.log(breweryTypes)
@@ -59,36 +59,40 @@ function getBreweries() {
 
       //Creates a new element for each attribute we select
       filteredResponse.forEach(function (element) {
-        var bName = document.createElement('p');
-        var bType = document.createElement('p');
-        var bStreet = document.createElement('p');
-        var bCity = document.createElement('p');
-        var bState = document.createElement('p');
+        var bName = document.createElement('h1');
+        var bType = document.createElement('h4');
+        var bStreet = document.createElement('h2');
+        var bCity = document.createElement('h3');
+        var bState = document.createElement('h3');
         var bWebsite = document.createElement('a');
-        var bPhone = document.createElement('p');
+        var bPhone = document.createElement('h3');
 
         //Style
         bName.style.color = "Red"
-        bPhone.style.margin = "0px auto 10px auto"
+        bName.style.borderTop = "2px red solid"
+        bName.style.padding = "10px 0px 0px 0px"
+        bType.style.margin = "0px auto 10px auto"
         bWebsite.setAttribute("href", element.website_url)
 
         //Inserts data from the JSON
         bName.innerHTML = element.name;
-        bType.innerHTML = element.brewery_type;
         bStreet.innerHTML = element.street;
         bCity.innerHTML = element.city;
         bState.innerHTML = element.state;
         bWebsite.innerHTML = element.website_url;
         bPhone.innerHTML = element.phone;
+        bType.innerHTML = element.brewery_type;
+
 
         //appends each element to contain the inserted Data        
         breweryListEl.appendChild(bName);
-        breweryListEl.appendChild(bType);
         breweryListEl.appendChild(bStreet);
         breweryListEl.appendChild(bCity);
         breweryListEl.appendChild(bState);
         breweryListEl.appendChild(bWebsite);
         breweryListEl.appendChild(bPhone);
+        breweryListEl.appendChild(bType);
+
 
         return filteredResponse
       });

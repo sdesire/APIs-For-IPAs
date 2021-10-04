@@ -73,3 +73,11 @@
   #breweryType label {
     margin: 5px 5px 5px 2px;
   }
+  #breweryList {
+    text-align: center;
+    margin: 0px auto;
+    width: 50%;
+  }
+  #btn {
+    display: block;
+  }
