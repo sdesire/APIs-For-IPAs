@@ -1,64 +1,60 @@
 *{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
   
-  body{
-    font-family: "Nunito",sans-serif;
-    background: #f8f8f8;
-  }
+}
+
+body {
   
-  .input{
-    text-align: center;
-    margin: 100px auto;
-  }
+  font-size: 16px;
+  font-family: Verdana, Helvetica, Tahoma, sans-serif;
   
-  input[type="submit"]{
-    padding: 15px 30px;
-    background: #e7e7e7;
-    border: none;
-    border-radius: 1px;
-    font-family: "Nunito",sans-serif;
-    font-weight:bold;
-    font-size: 20px;
-  }
-  
-  .input input[type="text"]{
-    width: 600px;
-    height: 55px;
-    padding: 5px 10px;
-    background: #e7e7e7;
-    border: none;
-    border-radius: 1px;
-    font-family: "Nunito",sans-serif;
-    font-weight:bold;
-    font-size: 20px;
-  }
-  
-  .card{
-    width: 50%;
-    background: #e7e7e7;
-    height: 40vh;
-    margin: 50px auto;
-    border-radius: 2px;
-  }
+}
+
+.container{
+  position: center;
+}
+
+.h1{
+  position: center;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+}
+
+.col-sm-12{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  height: 240px;
+  width: 1200px;    
+  border: 5px solid black;    
+  border-radius: 10px;
+}
+
+.flex-container > div{
+  background-color: #ffffff;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
   
   
-  .close{
-    float: right;
-    margin-top: -2px;
-    cursor: pointer;
-    margin-right: 20px;
-  }
   
-  .card h1{
-    padding: 5px 0;
-    text-align: center;
-  }
-  
-  .card p{
-    text-align: center;
-    margin:40px 0;
-    font-size:20px;
-  }
+
+h3{
+  font-weight: bold;
+}
+.forecast{
+  padding: 15%;
+  font-size: 0.9em;
+}
+span{
+  font-size: 1em;
+}
+li:hover{
+  background-color: lightslategray;
+  text-decoration: underline;
+}
+

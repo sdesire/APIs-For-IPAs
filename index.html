@@ -4,30 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>OpenWeatherMap Api</title>
-  <link rel="stylesheet" href="style.css">
+  <title>5-day Forcast</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/css-layout/1.1.1/css-layout.min.js" integrity="sha512-WeFxT4bqnrM1Laaz9RzBX3ttu+vleafd9wICGomR7KUPmaJUf6+Ysu9Zoqm4UyEjgsIArS4JsnHSWrPKOACDgQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <!-- <div class="main">
-    <div class="header">
-      <h1>Weather/Brewery API</h1>
-      <p>Enter any city name in the input box below to get the data</p>
-    </div> -->
   
-    <div class="input">
-      <input type="text" placeholder="Enter the city" class="input_text">
-      <input type="submit" value="Submit" class="submit">
-    </div>
-  </div>
-
   <div class="container">
-    <div class="card">
-      <h1 class="name" id="name"></h1>
-      <p class="temp"></p>
-      <p class="clouds"></p>
-      <p class="desc"></p>
-    </div>
+  <h1 id="Para1">5-Day Weather Forcast</h1>
+  <div class="input">
+    <input type="text" placeholder="Enter the city" class="input_text">
+    <input type="submit" value="Submit" class="submit">
   </div>
-<script src=""></script>
+</div>
+  <div class="flex-container"></div>
+    <div class="row">
+        <div class="col-sm-4 bg-light">
+            <div class="input-group mb-3">  
+                <div class="input-group-append">                 
+                </div>
+              </div>     
+            </ul>
+        </div>   
+        <div class="col-sm-8">
+            <div class="row ml-2 border border-dark rounded">
+                <div class="col-sm-12" id="current-weather">
+                    <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+                    <p>Temperature:<span class="current" id="temperature"></span></p>
+                    <p>Humidity:<span class="current" id="humidity"></span></p> 
+                    <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+ 
+                </div>
+            </div>
+  <div class="col-sm-12" id ="future-weather">
+    <h3>5-Day Forecast:</h3>
+    <div class="row text-light">
+        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+            <p id="fDate0"></p>
+            <p id="fImg0"></p>
+            <p>Temp:<span id="fTemp0"></span></p>
+            <p>Humidity:<span id="fHumidity0"></span></p>
+        </div>
+        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+            <p id="fDate1"></p>
+            <p id="fImg1"></p>
+            <p>Temp:<span id="fTemp1"></span></p>
+            <p>Humidity:<span id="fHumidity1"></span></p>
+        </div>
+        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+            <p id="fDate2"></p>
+            <p id="fImg2"></p>
+            <p>Temp:<span id="fTemp2"></span></p>
+            <p>Humidity:<span id="fHumidity2"></span></p>
+        </div>
+        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+            <p id="fDate3"></p>
+            <p id="fImg3"></p>
+            <p>Temp:<span id="fTemp3"></span></p>
+            <p>Humidity:<span id="fHumidity3"></span></p>
+        </div>
+        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+            <p id="fDate4"></p>
+            <p id="fImg4"></p>
+            <p>Temp:<span id="fTemp4"></span></p>
+            <p>Humidity:<span id="fHumidity4"></span></p>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+  
+<script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./script.js"></script>
+
+
 </body>
 </html>
+
+  
