@@ -7,7 +7,7 @@ A app created to help the user plan which breweries to get the finest beers wher
 3. JavaScript
 4. Bulma
 # Site Location 
-Placeholder 
+https://sdesire.github.io/APIs-For-IPAs/ 
 # Contribution
 Made by [Sunita Maharaj-Persad], [Bradley Evans], [Sean Desire], [Jared Gavigan], [Julio Rios]
 # Site Images
