@@ -11,58 +11,58 @@
 </head>
 
 <body>
-    
+<div class="container box">
     <div class="has-text-centered" id="userChoice"><input class="is-size-4" type="text" id="cityChoice" placeholder="City"/><span><input class="is-size-4" type="text" id="stateChoice" placeholder="State" /></span></div>
     <!--Brewery Options-->
-    <div class="columns" id="breweryType">.
-        <div class="column has-text-centered">
+    <div class="columns is-size-6" id="breweryType">.
+        <div class="column">
             <input type="checkbox" id="micro" value="micro">
             <label for="micro">Micro Breweries</label><br>
         </div>
 
-        <div class="column has-text-centered">
+        <div class="column">
             <input type="checkbox" id="nano" value="nano">
             <label for="nano">Nano Breweries</label><br>
         </div>
 
 
-        <div class="column has-text-centered">
+        <div class="column">
             <input type="checkbox" id="regional" value="regional">
             <label for="regional">Regional Breweries</label><br>
         </div>
 
 
-        <div class="column has-text-centered">
+        <div class="column">
             <input type="checkbox" id="brewpub" value="brewpub">
             <label for="brewpub">Brewpub Breweries</label><br>
         </div>
 
 
-        <div class="column has-text-centered">
+        <div class="column">
             <input type="checkbox" id="large" value="large">
             <label for="large">Large Breweries</label><br>
         </div>
 
 
-        <div class="column has-text-centered">
+        <div class="column">
             <input type="checkbox" id="planning" value="planning">
             <label for="planning">Planning Breweries</label><br>
         </div>
 
 
-        <div class="column has-text-centered">
+        <div class="column">
             <input type="checkbox" id="bar" value="bar">
             <label for="bar">Bar Breweries</label><br>
         </div>
 
 
-        <div class="column has-text-centered">
+        <div class="column">
             <input type="checkbox" id="contract" value="contract">
             <label for="contract">Contract Breweries</label><br>
         </div>
 
 
-        <div class="column has-text-centered">
+        <div class="column">
             <input type="checkbox" id="proprietor" value="proprietor">
             <label for="proprietor">Proprietor Breweries</label><br>
         </div>
@@ -70,7 +70,7 @@
     </div>
     
     <button class="button container" id="btn" onclick="getBreweries()">Get Brewery List</button>
-
+</div>
     <div class="container">
         <div class="card">
             <h1 class="name" id="name"></h1>
