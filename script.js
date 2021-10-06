@@ -1,30 +1,22 @@
-var input = document.querySelector('.input_text');
+var input = document.querySelector('#cityChoice');
 var main = document.querySelector('#name');
 var temp = document.querySelector('.temp');
 var desc = document.querySelector('.desc');
 var clouds = document.querySelector('.clouds');
-var button = document.querySelector('.submit');
+var button = document.querySelector('#btn');
 
-
-button.addEventListener('click', function(name){
-fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=imperial&appid=50a7aa80fa492fa92e874d23ad061374')
-
+button.addEventListener('click', function (){
+fetch('http://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=imperial&appid=50a7aa80fa492fa92e874d23ad061374')
 .then(response => response.json())
 .then(data => {
   var tempValue = Math.floor (data['main']['temp']);
   var nameValue = data['name'];
   var descValue = data['weather'][0]['description'];
- // var icon = "http://openweathermap.org/img/wn/10d@2x.png" + data.weather[0].icon + ".png";
-  
-//$('.icon').attr("src", icon);
-//$('weather').append(weather);
-//$('.temp').append(temp);
-  
+
   main.innerHTML = nameValue;
   desc.innerHTML = "Desc - "+descValue;
   temp.innerHTML = "Temp - "+tempValue;
   input.value ="";
-  
 
 })
 

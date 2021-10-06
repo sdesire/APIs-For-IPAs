@@ -71,7 +71,7 @@ function getFilteredBreweries(breweries, breweryTypes) {
 
   return filteredResponse;
 }
-
+//Add back enter key!!
 function getBreweries() {
   console.log("Button Clicked");
 
