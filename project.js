@@ -73,6 +73,7 @@ function getFilteredBreweries(breweries, breweryTypes) {
 
   return filteredResponse;
 }
+
 //Add back enter key!!
 function getBreweries() {
   console.log("Button Clicked");
@@ -80,6 +81,8 @@ function getBreweries() {
   const cityChoice = document.getElementById('cityChoice').value;
   const stateChoice = document.getElementById('stateChoice').value;
   const breweryTypes = getBreweriesTypes();
+
+  localStorage.setItem('cityChoice', cityChoice)
 
   fetch(`https://api.openbrewerydb.org/breweries?by_city=${cityChoice}&by_state=${stateChoice}&per_page=50,name:asc`)
     .then((response) => response.json())
@@ -139,8 +142,12 @@ function getBreweries() {
         return filteredResponse
       });
 
+
     })
+
     .catch((err) => {
       console.log(err);
     });
+
+
   }
