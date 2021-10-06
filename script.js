@@ -8,7 +8,7 @@ var hum = document.querySelector('#humidity')
 var icon = document.querySelector('.icon');
 
 button.addEventListener('click', function (){
-fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=imperial&appid=50a7aa80fa492fa92e874d23ad061374')
+fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=imperial&appid=f6b36b81de024b7633ed8e427463edeb')
 .then(response => response.json())
 .then(data => {
   var tempValue = Math.floor (data['main']['temp']);
@@ -16,7 +16,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=i
   var descValue = data['weather'][0]['description'];
   var humValue  = data['main']['humidity'];
   var descCap = descValue.split(" ");
-  var iconSrc  = "http://openweathermap.org/img/wn/" + data.weather[0].icon + ".png";
+  var iconSrc  = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png";
 
   for (var i = 0; i < descCap.length; i++) {
     descCap[i] = descCap[i].charAt(0).toUpperCase() + descCap[i].slice(1);
