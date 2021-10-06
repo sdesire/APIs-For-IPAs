@@ -88,8 +88,11 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+  
   }
 
+  /* ALSO ASK IF WE WANT THIS BACK */
+/* 
   .brewery-form{
     display: flex;
     padding: 1rem;
@@ -142,4 +145,4 @@
     height: 5rem;
     border-radius: 7px;
     background-color: rgb(156, 156, 156);
-  }
+  } */

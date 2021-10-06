@@ -1,67 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>API's for IPA's</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-    <div id="userChoice">City: <input type="text" id="cityChoice" placeholder="City" /> <span>State: <input type="text" id="stateChoice" placeholder="State" /></span></div>
-    <!--Brewery Options-->
-    <div id="breweryType">
-        <input type="checkbox" id="micro" value="micro">
-        <label for="micro">Micro Breweries</label><br>
-
-        <input type="checkbox" id="nano" value="nano">
-        <label for="nano">Nano Breweries</label><br>
-
-        <input type="checkbox" id="regional" value="regional">
-        <label for="regional">Regional Breweries</label><br>
-
-        <input type="checkbox" id="brewpub" value="brewpub">
-        <label for="brewpub">Brewpub Breweries</label><br>
-
-        <input type="checkbox" id="large" value="large">
-        <label for="large">Large Breweries</label><br>
-
-        <input type="checkbox" id="planning" value="planning">
-        <label for="planning">Planning Breweries</label><br>
-
-        <input type="checkbox" id="bar" value="bar">
-        <label for="bar">Bar Breweries</label><br>
-
-        <input type="checkbox" id="contract" value="contract">
-        <label for="contract">Contract Breweries</label><br>
-
-        <input type="checkbox" id="proprietor" value="proprietor">
-        <label for="proprietor">Proprietor Breweries</label><br>
-    </div>
-    <br>
-    <button id="btn" onclick="getBreweries()">Get Brewery List</button>
-
-  <div class="container">
-    <div class="card">
-      <h1 class="name" id="name"></h1>
-      <p class="temp"></p>
-      <p class="clouds"></p>
-      <p class="desc"></p>
-    </div>
-  </div>
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>
-        <APIs-For-IPAs>
-    </title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API's for IPA's</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
-  
+<body>
+    
+    <div class="has-text-centered" id="userChoice"><input class="is-size-4" type="text" id="cityChoice" placeholder="City"/><span><input class="is-size-4" type="text" id="stateChoice" placeholder="State" /></span></div>
+    <!--Brewery Options-->
+    <div class="columns" id="breweryType">.
+        <div class="column has-text-centered">
+            <input type="checkbox" id="micro" value="micro">
+            <label for="micro">Micro Breweries</label><br>
+        </div>
+
+        <div class="column has-text-centered">
+            <input type="checkbox" id="nano" value="nano">
+            <label for="nano">Nano Breweries</label><br>
+        </div>
+
+
+        <div class="column has-text-centered">
+            <input type="checkbox" id="regional" value="regional">
+            <label for="regional">Regional Breweries</label><br>
+        </div>
+
+
+        <div class="column has-text-centered">
+            <input type="checkbox" id="brewpub" value="brewpub">
+            <label for="brewpub">Brewpub Breweries</label><br>
+        </div>
+
+
+        <div class="column has-text-centered">
+            <input type="checkbox" id="large" value="large">
+            <label for="large">Large Breweries</label><br>
+        </div>
+
+
+        <div class="column has-text-centered">
+            <input type="checkbox" id="planning" value="planning">
+            <label for="planning">Planning Breweries</label><br>
+        </div>
+
+
+        <div class="column has-text-centered">
+            <input type="checkbox" id="bar" value="bar">
+            <label for="bar">Bar Breweries</label><br>
+        </div>
+
+
+        <div class="column has-text-centered">
+            <input type="checkbox" id="contract" value="contract">
+            <label for="contract">Contract Breweries</label><br>
+        </div>
+
+
+        <div class="column has-text-centered">
+            <input type="checkbox" id="proprietor" value="proprietor">
+            <label for="proprietor">Proprietor Breweries</label><br>
+        </div>
+
+    </div>
+    
+    <button class="button container" id="btn" onclick="getBreweries()">Get Brewery List</button>
+
+    <div class="container">
+        <div class="card">
+            <h1 class="name" id="name"></h1>
+            <p class="temp"></p>
+            <p class="clouds"></p>
+            <p class="desc"></p>
+        </div>
+    </div>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>
+            <APIs-For-IPAs>
+        </title>
+    </head>
+
+
     <!-- possibly make enter also trigger the function?? -->
 
     <div id="breweryList"></div>
