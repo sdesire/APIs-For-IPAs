@@ -1,3 +1,6 @@
+body {
+  background-image: url(./assets/christin-hume-08tX2fsuSLg-unsplash.jpg);
+}
 /* *{
     margin:0;
     padding: 0;
@@ -144,4 +147,4 @@
     height: 5rem;
     border-radius: 7px;
     background-color: rgb(156, 156, 156);
-  } */ */
+  } */ 
