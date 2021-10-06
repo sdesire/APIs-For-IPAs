@@ -1,84 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>
-        <APIs-For-IPAs>
-    </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OpenWeatherMap Api</title>
+  <link rel="stylesheet" href="./style.css">
+
 </head>
-
 <body>
-    <div class="container">
-        <div class="brewery-form">
-            <div class="form-item" id="userChoice">
-                <input type="text" id="cityChoice" placeholder="City">
-            </div>
-            <div class="form-item" id="userChoice">
-                <input type="text" id="stateChoice" placeholder="State">
-            </div>
-
-            <div class="form-item">
-                <button id="btn" onclick="getBreweries()">Get Brewery List</button>
-            </div>
-        </div>
-        <!--Brewery Options-->
-        <div class="brewery-inputs-container">
-            <h2 class="brewery-input-title">Brewery Types</h2>
-            <div id="breweryType" class="brewery-inputs-grid">
-                <div class="brewery-type-item">
-                    <label for="micro">Micro</label>
-                    <input type="checkbox" id="micro" class="brewery-type" value="micro">
-                </div>
-               
-                <div class="brewery-type-item">
-                    <label for="nano">Nano</label>
-                    <input type="checkbox" id="nano" class="brewery-type" value="nano">
-                </div>
-                <div class="brewery-type-item">
-                    <label for="regional">Regional</label>
-                    <input type="checkbox" id="regional" class="brewery-type" value="regional">
-                </div>
-                <div class="brewery-type-item">
-                    <label for="brewpub">Brewpub</label>
-                    <input type="checkbox" id="brewpub" class="brewery-type" value="brewpub">
-                </div>
-                <div class="brewery-type-item">
-                    <label for="large">Large</label>
-                    <input type="checkbox" id="large" class="brewery-type" value="large">               
-                </div>
-                <div class="brewery-type-item">
-                    <label for="planning">Planning</label>
-                    <input type="checkbox" id="planning" class="brewery-type" value="planning">       
-                </div>
-                <div class="brewery-type-item">
-                    <label for="bar">Bar</label>
-                    <input type="checkbox" id="bar" class="brewery-type" value="bar">
-                </div>
-                <div class="brewery-type-item">
-                    <label for="contract">Contract</label>
-                    <input type="checkbox" id="contract" class="brewery-type" value="contract">                
-                </div>
-                <div class="brewery-type-item">
-                    <label for="bar">Bar</label>
-                    <input type="checkbox" id="bar" class="brewery-type" value="bar">
-                </div>
-                <div class="brewery-type-item">
-                    <label for="proprietor">Proprietor</label>
-                    <input type="checkbox" id="proprietor" class="brewery-type" value="proprietor">           
-                </div>
-            </div>
-        </div>
-    
-        <div id="breweryList"></div>
-
+  <!-- <div class="main">
+    <div class="header">
+      <h1>Weather/Brewery API</h1>
+      <p>Enter any city name in the input box below to get the data</p>
+    </div> -->
+  
+    <div class="input">
+      <input type="text" placeholder="Enter the city" class="input_text">
+      <input type="submit" value="Submit" class="submit">
     </div>
+  </div>
 
-
-    <script src="project.js"></script>
+  <div class="container">
+    <div class="card">
+      <h1 class="name" id="name"></h1>
+      <p class="temp"></p>
+      <p class="clouds"></p>
+      <p class="desc"></p>
+    </div>
+  </div>
+<script src="script.js"></script>
 </body>
-
 </html>
