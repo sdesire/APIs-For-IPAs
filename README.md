@@ -1,5 +1,5 @@
 # APIs-For-IPAs Group-3
-A app created to help the user plan which breweries to get the finest beers wherever you travel to, including a weather forecast with just the click of a button.
+A app created to help the user plan which breweries to get the finest beers wherever they travel to, including a weather forecast with just the click of a button.
 
 # Built With
 1. HTML
