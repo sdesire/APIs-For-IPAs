@@ -15,7 +15,7 @@
 
 
 
-    <div class="container box">
+    <div class="container box box-shadow">
         <h1 class="is-size-1">
             Welcome to API's for IPA's! 
         </h1>
@@ -89,17 +89,18 @@
 
         </div>
 
-        <button class="button is-small container column" id="btn" onclick="getBreweries()">Get Brewery List</button>
+        <button class="button is-small container column is-size-5" id="btn" onclick="getBreweries()">Get Brewery List</button>
 
     </div>
 
     <div class="container box column has-text-centered">
         <div class="column">
             <h1>Current Weather</h1>
-            <p class="temp is-size-4"></p>
-            <p class="temp is-size-4"></p>
-            <p class="clouds is-size-4"></p>
-            <p class="desc is-size-4"></p>
+            <h1 class="name is-size-3" id="name"></h1>
+            <p class="is-size-4" id="temp"></p>
+            <p class="is-size-4" id="humidity"></p>
+            <p class="is-size-4" id="clouds"></p>
+            <p class="is-size-4" id="desc"></p>
         </div>
     </div>
 
