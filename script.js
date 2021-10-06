@@ -14,7 +14,7 @@ fetch('http://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=im
   var descValue = data['weather'][0]['description'];
 
   main.innerHTML = nameValue;
-  desc.innerHTML = "Desc - "+descValue;
+  desc.innerHTML = "Clouds - "+descValue;
   temp.innerHTML = "Temp - "+tempValue;
   input.value ="";
 
