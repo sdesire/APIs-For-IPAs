@@ -10,17 +10,19 @@ document.querySelector('#userChoice').addEventListener('keyup', function(e){
   }
 });
 
-//Search For breweries when Checkbox is Clicked
-for (let i = 0; i < inputs.length; i++) {
-  inputs[i].addEventListener('click', function(){
-    const cityChoice = document.getElementById('cityChoice').value;
 
-    //only search if city choice is not empty
-    if(cityChoice !== ""){
-      getBreweries();
-    }
-  });    
-}
+//**ASK IF THEY WANT TO TRY AND INCORPORATE BACK IN */
+// //Search For breweries when Checkbox is Clicked
+// for (let i = 0; i < inputs.length; i++) {
+//   inputs[i].addEventListener('click', function(){
+//     const cityChoice = document.getElementById('cityChoice').value;
+
+//     //only search if city choice is not empty
+//     if(cityChoice !== ""){
+//       getBreweries();
+//     }
+//   });    
+// }
 
 function getAllBreweriesTypes() {
   var inputDiv = document.getElementById('breweryType');
@@ -72,12 +74,15 @@ function getFilteredBreweries(breweries, breweryTypes) {
   return filteredResponse;
 }
 
+//Add back enter key!!
 function getBreweries() {
   console.log("Button Clicked");
 
   const cityChoice = document.getElementById('cityChoice').value;
   const stateChoice = document.getElementById('stateChoice').value;
   const breweryTypes = getBreweriesTypes();
+
+  localStorage.setItem('cityChoice', cityChoice)
 
   fetch(`https://api.openbrewerydb.org/breweries?by_city=${cityChoice}&by_state=${stateChoice}&per_page=50,name:asc`)
     .then((response) => response.json())
@@ -100,11 +105,18 @@ function getBreweries() {
         var bPhone = document.createElement('a');
 
         //Style
+        bName.setAttribute("class", "is-size-2")
         bName.style.color = "Red"
         bName.style.borderTop = "2px red solid"
         bName.style.padding = "10px 0px 0px 0px"
         bType.style.margin = "0px auto 10px auto"
+        bType.setAttribute("class", "is-size-6")
+        bStreet.setAttribute("class", "is-size-4")
+        bCity.setAttribute("class", "is-size-4")
+        bState.setAttribute("class", "is-size-4")
+        bWebsite.setAttribute("class", "is-size-4")
         bWebsite.setAttribute("href", element.website_url)
+        bPhone.setAttribute("class", "is-size-4")
         bPhone.setAttribute("href", `tel:${element.phone}`)
         bPhone.style.display = "block"
 
@@ -130,8 +142,12 @@ function getBreweries() {
         return filteredResponse
       });
 
+
     })
+
     .catch((err) => {
       console.log(err);
     });
+
+
   }
