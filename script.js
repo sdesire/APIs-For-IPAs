@@ -8,7 +8,7 @@ var hum = document.querySelector('#humidity')
 var icon = document.querySelector('.icon');
 
 button.addEventListener('click', function (){
-fetch('http://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=imperial&appid=50a7aa80fa492fa92e874d23ad061374')
+fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=imperial&appid=50a7aa80fa492fa92e874d23ad061374')
 .then(response => response.json())
 .then(data => {
   var tempValue = Math.floor (data['main']['temp']);
