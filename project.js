@@ -102,11 +102,18 @@ function getBreweries() {
         var bPhone = document.createElement('a');
 
         //Style
+        bName.setAttribute("class", "is-size-2")
         bName.style.color = "Red"
         bName.style.borderTop = "2px red solid"
         bName.style.padding = "10px 0px 0px 0px"
         bType.style.margin = "0px auto 10px auto"
+        bType.setAttribute("class", "is-size-6")
+        bStreet.setAttribute("class", "is-size-4")
+        bCity.setAttribute("class", "is-size-4")
+        bState.setAttribute("class", "is-size-4")
+        bWebsite.setAttribute("class", "is-size-4")
         bWebsite.setAttribute("href", element.website_url)
+        bPhone.setAttribute("class", "is-size-4")
         bPhone.setAttribute("href", `tel:${element.phone}`)
         bPhone.style.display = "block"
 

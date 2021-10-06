@@ -1,4 +1,4 @@
-*{
+/* *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
@@ -39,13 +39,12 @@
   .card{
     width: 50%;
     background: #e7e7e7;
-    height: 40vh;
     margin: 50px auto;
     border-radius: 2px;
   }
   
   
-  .close{
+  /* .close{
     float: right;
     margin-top: -2px;
     cursor: pointer;
@@ -61,9 +60,9 @@
     text-align: center;
     margin:40px 0;
     font-size:20px;
-  }
+  } */
 
-  #breweryType {
+  /* #breweryType {
     display: flex;
   }
   
@@ -89,7 +88,7 @@
     align-items: center;
     justify-content: center;
   
-  }
+  } */
 
   /* ALSO ASK IF WE WANT THIS BACK */
 /* 
@@ -145,4 +144,4 @@
     height: 5rem;
     border-radius: 7px;
     background-color: rgb(156, 156, 156);
-  } */
+  } */ */
