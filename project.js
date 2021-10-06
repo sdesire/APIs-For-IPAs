@@ -1,5 +1,42 @@
-var typesB = ['micro', 'nano', 'regional', 'brewpub', 'large', 'planning', 'bar', 'contract', 'proprietor']
-  
+var inputDiv = document.getElementById('breweryType');
+var inputs = inputDiv.getElementsByTagName('input');
+
+document.querySelector('#userChoice').addEventListener('keyup', function(e){ 
+  const getBreweriesBtn = document.querySelector('#btn');
+  //enter key pressed up
+  if(e.keyCode === 13){
+    e.preventDefault();
+    getBreweriesBtn.click();
+  }
+});
+
+//Search For breweries when Checkbox is Clicked
+for (let i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener('click', function(){
+    const cityChoice = document.getElementById('cityChoice').value;
+
+    //only search if city choice is not empty
+    if(cityChoice !== ""){
+      getBreweries();
+    }
+  });    
+}
+
+function getAllBreweriesTypes() {
+  var inputDiv = document.getElementById('breweryType');
+  var inputs = inputDiv.getElementsByTagName('input');
+
+  var breweryTypes = [];
+
+  for (let i = 0; i < inputs.length; i++) {
+
+      if(inputs[i].type === "checkbox"){
+        breweryTypes.push(inputs[i].value);
+      }   
+  }
+
+  return breweryTypes;
+}
 
 function getBreweriesTypes() {
   var inputDiv = document.getElementById('breweryType');
@@ -10,14 +47,11 @@ function getBreweriesTypes() {
 
     if (inputs[i].checked) {
       breweryTypes.push(inputs[i].value);
-    } else if (inputs[i].checked = false) {
-      breweryTypes.push(inputs[i].value)
     }
   }
-  console.log(breweryTypes);
 
   //if none selected show all brewery types
-  return (breweryTypes.length == 0 )? typesB : breweryTypes;
+  return (breweryTypes.length == 0 )? getAllBreweriesTypes() : breweryTypes;
 }
 
 function getFilteredBreweries(breweries, breweryTypes) {
@@ -37,19 +71,6 @@ function getFilteredBreweries(breweries, breweryTypes) {
 
   return filteredResponse;
 }
-
-//document.querySelector('#userChoice').addEventListener('keypress', function getBreweries(e) {
-  //if (e.key === 'Enter') {
-
-document.querySelector('#userChoice').addEventListener('keyup', function(e){ 
-    const getBreweriesBtn = document.querySelector('#btn');
-    //enter key pressed up
-    if(e.keyCode === 13){
-      e.preventDefault();
-      getBreweriesBtn.click();
-    }
-  });
-
 
 function getBreweries() {
   console.log("Button Clicked");
@@ -105,7 +126,6 @@ function getBreweries() {
         breweryListEl.appendChild(bWebsite);
         breweryListEl.appendChild(bPhone);
         breweryListEl.appendChild(bType);
-
 
         return filteredResponse
       });

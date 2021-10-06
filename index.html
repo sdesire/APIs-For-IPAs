@@ -12,41 +12,71 @@
 </head>
 
 <body>
-    <div id="userChoice">City: <input type="text" id="cityChoice" placeholder="City" /> <span>State: <input type="text" id="stateChoice" placeholder="State" /></span></div>
-    <!--Brewery Options-->
-    <div id="breweryType">
-        <input type="checkbox" id="micro" value="micro">
-        <label for="micro">Micro Breweries</label><br>
+    <div class="container">
+        <div class="brewery-form">
+            <div class="form-item" id="userChoice">
+                <input type="text" id="cityChoice" placeholder="City">
+            </div>
+            <div class="form-item" id="userChoice">
+                <input type="text" id="stateChoice" placeholder="State">
+            </div>
 
-        <input type="checkbox" id="nano" value="nano">
-        <label for="nano">Nano Breweries</label><br>
-
-        <input type="checkbox" id="regional" value="regional">
-        <label for="regional">Regional Breweries</label><br>
-
-        <input type="checkbox" id="brewpub" value="brewpub">
-        <label for="brewpub">Brewpub Breweries</label><br>
-
-        <input type="checkbox" id="large" value="large">
-        <label for="large">Large Breweries</label><br>
-
-        <input type="checkbox" id="planning" value="planning">
-        <label for="planning">Planning Breweries</label><br>
-
-        <input type="checkbox" id="bar" value="bar">
-        <label for="bar">Bar Breweries</label><br>
-
-        <input type="checkbox" id="contract" value="contract">
-        <label for="contract">Contract Breweries</label><br>
-
-        <input type="checkbox" id="proprietor" value="proprietor">
-        <label for="proprietor">Proprietor Breweries</label><br>
+            <div class="form-item">
+                <button id="btn" onclick="getBreweries()">Get Brewery List</button>
+            </div>
+        </div>
+        <!--Brewery Options-->
+        <div class="brewery-inputs-container">
+            <h2 class="brewery-input-title">Brewery Types</h2>
+            <div id="breweryType" class="brewery-inputs-grid">
+                <div class="brewery-type-item">
+                    <label for="micro">Micro</label>
+                    <input type="checkbox" id="micro" class="brewery-type" value="micro">
+                </div>
+               
+                <div class="brewery-type-item">
+                    <label for="nano">Nano</label>
+                    <input type="checkbox" id="nano" class="brewery-type" value="nano">
+                </div>
+                <div class="brewery-type-item">
+                    <label for="regional">Regional</label>
+                    <input type="checkbox" id="regional" class="brewery-type" value="regional">
+                </div>
+                <div class="brewery-type-item">
+                    <label for="brewpub">Brewpub</label>
+                    <input type="checkbox" id="brewpub" class="brewery-type" value="brewpub">
+                </div>
+                <div class="brewery-type-item">
+                    <label for="large">Large</label>
+                    <input type="checkbox" id="large" class="brewery-type" value="large">               
+                </div>
+                <div class="brewery-type-item">
+                    <label for="planning">Planning</label>
+                    <input type="checkbox" id="planning" class="brewery-type" value="planning">       
+                </div>
+                <div class="brewery-type-item">
+                    <label for="bar">Bar</label>
+                    <input type="checkbox" id="bar" class="brewery-type" value="bar">
+                </div>
+                <div class="brewery-type-item">
+                    <label for="contract">Contract</label>
+                    <input type="checkbox" id="contract" class="brewery-type" value="contract">                
+                </div>
+                <div class="brewery-type-item">
+                    <label for="bar">Bar</label>
+                    <input type="checkbox" id="bar" class="brewery-type" value="bar">
+                </div>
+                <div class="brewery-type-item">
+                    <label for="proprietor">Proprietor</label>
+                    <input type="checkbox" id="proprietor" class="brewery-type" value="proprietor">           
+                </div>
+            </div>
+        </div>
+    
+        <div id="breweryList"></div>
 
     </div>
-    <!-- possibly make enter also trigger the function?? -->
-    <button id="btn" onclick="getBreweries()">Get Brewery List</button>
 
-    <div id="breweryList"></div>
 
     <script src="project.js"></script>
 </body>
