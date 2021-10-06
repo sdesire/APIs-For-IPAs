@@ -31,4 +31,55 @@
   </div>
 <script src="script.js"></script>
 </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>
+        <APIs-For-IPAs>
+    </title>
+</head>
+
+<body>
+    <div id="userChoice">City: <input type="text" id="cityChoice" placeholder="City" /> <span>State: <input type="text" id="stateChoice" placeholder="State" /></span></div>
+    <!--Brewery Options-->
+    <div id="breweryType">
+        <input type="checkbox" id="micro" value="micro">
+        <label for="micro">Micro Breweries</label><br>
+
+        <input type="checkbox" id="nano" value="nano">
+        <label for="nano">Nano Breweries</label><br>
+
+        <input type="checkbox" id="regional" value="regional">
+        <label for="regional">Regional Breweries</label><br>
+
+        <input type="checkbox" id="brewpub" value="brewpub">
+        <label for="brewpub">Brewpub Breweries</label><br>
+
+        <input type="checkbox" id="large" value="large">
+        <label for="large">Large Breweries</label><br>
+
+        <input type="checkbox" id="planning" value="planning">
+        <label for="planning">Planning Breweries</label><br>
+
+        <input type="checkbox" id="bar" value="bar">
+        <label for="bar">Bar Breweries</label><br>
+
+        <input type="checkbox" id="contract" value="contract">
+        <label for="contract">Contract Breweries</label><br>
+
+        <input type="checkbox" id="proprietor" value="proprietor">
+        <label for="proprietor">Proprietor Breweries</label><br>
+
+    </div>
+    <!-- possibly make enter also trigger the function?? -->
+    <button id="btn" onclick="getBreweries()">Get Brewery List</button>
+
+    <div id="breweryList"></div>
+
+    <script src="project.js"></script>
+</body>
+
 </html>
