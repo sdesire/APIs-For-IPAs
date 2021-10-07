@@ -10,20 +10,6 @@ document.querySelector('#userChoice').addEventListener('keyup', function(e){
   }
 });
 
-
-//**ASK IF THEY WANT TO TRY AND INCORPORATE BACK IN */
-// //Search For breweries when Checkbox is Clicked
-// for (let i = 0; i < inputs.length; i++) {
-//   inputs[i].addEventListener('click', function(){
-//     const cityChoice = document.getElementById('cityChoice').value;
-
-//     //only search if city choice is not empty
-//     if(cityChoice !== ""){
-//       getBreweries();
-//     }
-//   });    
-// }
-
 function getAllBreweriesTypes() {
   var inputDiv = document.getElementById('breweryType');
   var inputs = inputDiv.getElementsByTagName('input');
@@ -74,7 +60,6 @@ function getFilteredBreweries(breweries, breweryTypes) {
   return filteredResponse;
 }
 
-//Add back enter key!!
 function getBreweries() {
   console.log("Button Clicked");
 

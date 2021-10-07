@@ -33,7 +33,6 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=i
 
 })
 
-.catch(err => alert("Wrong city name!"));
 })
 
 /*catch error*/
