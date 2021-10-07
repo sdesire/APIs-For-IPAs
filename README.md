@@ -7,6 +7,8 @@ A app created to help the user plan which breweries to get the finest beers wher
 3. JavaScript
 4. Bulma
 5. JSON
+6. Open Brewery DB
+7. Open-Meteo
 # Site Location 
 https://sdesire.github.io/APIs-For-IPAs/ 
 # Contribution
