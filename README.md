@@ -12,4 +12,5 @@ https://sdesire.github.io/APIs-For-IPAs/
 # Contribution
 Made by [Sunita Maharaj-Persad], [Bradley Evans], [Sean Desire], [Jared Gavigan], [Julio Rios]
 # Site Images
-Placeholder 
+ ![API 1](https://user-images.githubusercontent.com/88795800/136443099-e06652de-2ca7-47e3-9d20-804212c659b1.png)
+ 
