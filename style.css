@@ -5,14 +5,7 @@ body {
   background-image: url(./assets/christin-hume-08tX2fsuSLg-unsplash.jpg);
   background-position:top;
 }
-#bList {
-  border: white 4px solid;
-  
-}
-#weather {
-  border: white 4px solid;
 
-}
 #userInput {
   border: white 4px solid;
 }
