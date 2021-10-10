@@ -34,7 +34,13 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=i
   icon.setAttribute("Src", iconSrc);
   
   weatherEl.setAttribute('class', "container box column has-text-centered has-background-grey-lighter")
-  
+  main.setAttribute("class", "is-size-3")
+  desc.setAttribute("class", "is-size-3")
+  temp.setAttribute("class", "is-size-3")
+  hum.setAttribute("class", "is-size-3")
+  icon.setAttribute("class", "is-size-3")
+
+
   weatherEl.appendChild(main)
   weatherEl.appendChild(desc)
   weatherEl.appendChild(temp)
