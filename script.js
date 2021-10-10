@@ -1,11 +1,13 @@
+
+
+const weatherEl = document.querySelector('#weather')
 var input = document.querySelector('#cityChoice');
-var main = document.querySelector('#name');
-var temp = document.querySelector('#temp');
-var desc = document.querySelector('#desc');
-var clouds = document.querySelector('#clouds');
 var button = document.querySelector('#btn');
-var hum = document.querySelector('#humidity')
-var icon = document.querySelector('.icon');
+var main = document.createElement('p');
+var temp = document.createElement('p');
+var desc = document.createElement('p');
+var hum = document.createElement('p');
+var icon = document.createElement('img');
 
 button.addEventListener('click', function (){
 fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=imperial&appid=f6b36b81de024b7633ed8e427463edeb')
@@ -30,7 +32,14 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=i
   hum.innerHTML = "Humidity: " + humValue + "&#37;";
   input.value ="";
   icon.setAttribute("Src", iconSrc);
-
+  
+  weatherEl.setAttribute('class', "container box column has-text-centered has-background-grey-lighter")
+  
+  weatherEl.appendChild(main)
+  weatherEl.appendChild(desc)
+  weatherEl.appendChild(temp)
+  weatherEl.appendChild(hum)
+  weatherEl.appendChild(icon)
 })
 
 })

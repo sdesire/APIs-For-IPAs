@@ -90,6 +90,7 @@ function getBreweries() {
         var bPhone = document.createElement('a');
 
         //Style
+        breweryListEl.setAttribute("class", "container box mb-6 has-background-grey-lighter")
         bName.setAttribute("class", "is-size-2")
         bName.style.color = "Red"
         bName.style.borderTop = "2px red solid"
