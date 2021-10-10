@@ -60,6 +60,37 @@ function getFilteredBreweries(breweries, breweryTypes) {
   return filteredResponse;
 }
 
+function saveSearch(cityChoice, stateChoice){
+  document.cookie = "city=" + cityChoice;
+  document.cookie += "state=" +stateChoice;
+}
+
+function getSaveSearch (){
+  let locationCookie = document.cookie;
+}
+
+function printBreweries(){
+  var breweryList=document.getElementsByClassName('selectedBreweries');
+
+  var printList='';
+
+  for(var i = 0; i < breweryList.length; i++){
+    if (breweryList[i].type=='checkbox'&&breweryList[i].checked==true){
+      printList+='<p>'+breweryList[i].value+'</p>';
+      
+    }
+  }
+  
+  var printWindow=window.open();
+  //printWindow.document.open('text/plain');
+  printWindow.document.write('<p>'+printList+'</p>');
+  printWindow.document.close();
+  printWindow.focus();
+  printWindow.print();
+  printWindow.close();
+
+}
+
 function getBreweries() {
   console.log("Button Clicked");
 
@@ -88,7 +119,8 @@ function getBreweries() {
         var bState = document.createElement('h3');
         var bWebsite = document.createElement('a');
         var bPhone = document.createElement('a');
-
+        var drinkBtn = document.createElement('input');
+        
         //Style
         bName.setAttribute("class", "is-size-2")
         bName.style.color = "Red"
@@ -104,6 +136,9 @@ function getBreweries() {
         bPhone.setAttribute("class", "is-size-4")
         bPhone.setAttribute("href", `tel:${element.phone}`)
         bPhone.style.display = "block"
+        drinkBtn.setAttribute ("class", "selectedBreweries");
+        drinkBtn.setAttribute ("type", "checkbox");
+        drinkBtn.setAttribute ("value", element.name+"\n"+element.street+"\n");
 
         //Inserts data from the JSON
         bName.innerHTML = element.name;
@@ -123,6 +158,7 @@ function getBreweries() {
         breweryListEl.appendChild(bWebsite);
         breweryListEl.appendChild(bPhone);
         breweryListEl.appendChild(bType);
+        breweryListEl.appendChild(drinkBtn);
 
         return filteredResponse
       });

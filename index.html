@@ -100,8 +100,9 @@
 
     </div>
 
+        <!--Display Current Weather -->
     <div id="weather" class="container box column has-text-centered has-background-grey-lighter">
-        <div class="column">
+        <div class="column"> 
             <h1>Current Weather</h1>
             <h1 class="name is-size-3" id="name"></h1>
             <p class="is-size-4" id="temp"></p>
@@ -113,6 +114,12 @@
     </div>
 
     <div id="bList" class="container box mb-6 has-background-grey-lighter">
+        <div id="listTools">
+            <center>
+            <label>Print Selected Breweries</label>
+            <input type='button' onclick='printBreweries()' value='print'/>
+            </center>
+        </div>
         <div class="has-text-centered is-narrowr" id="breweryList"> Brewery List</div>
 
     </div>
